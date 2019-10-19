@@ -16,7 +16,7 @@
             <div>
               <div class="header">
                 <h3 @click="toDetail(item.id)">
-                  <a target="_blank" :href="item.href">{{ item.title }}</a>
+                  <nuxt-link :to="`/detail?id=${item.id}`">   {{ item.title }}</nuxt-link>
                 </h3>
                 <span style="cursor: pointer" @click="toClassDetail(item.value, item.label)">{{ item.label }}</span>
               </div>

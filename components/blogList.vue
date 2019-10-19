@@ -8,7 +8,7 @@
           <div>
             <div class="header">
               <h3 @click="toDetail(item.id)">
-                {{ item.title }}
+                <nuxt-link :to="`/detail?id=${item.id}`">   {{ item.title }}</nuxt-link>
               </h3>
               <span style="cursor: pointer" @click="toClassDetail(item.value, item.label)">{{ item.label }}</span>
             </div>
@@ -79,13 +79,7 @@ export default {
   },
   methods: {
     toDetail(id) {
-      // detailHtml({id}).then(res=>{
-      //   console.log(res)
-      // }).catch(err=>{
-      //   window.open(window._www+`/detail_${id}.html`)
-      // })
-      // this.$router.push('./detail?id=' + id);
-     // window.open(`http://sxitw.cn:8000/detail_${id}.html`);
+        // this.$router.push('./detail?id=' + id);
     },
     toClassDetail(value, label) {
       this.$router.push('./classifyDetail?value=' + value + '&label=' + label);
