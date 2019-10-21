@@ -11,36 +11,36 @@
         <div class="nav-u">
           <ul>
             <li>
-              <nuxt-link to="/">
-                <i class="iconfont icon-shouye"></i>
+              <i class="iconfont icon-shouye"></i>
+              <nuxt-link to="/" class="toUrl">
                 首页
               </nuxt-link>
             </li>
 
             <li>
-              <nuxt-link to="/tools">
-                <i class="iconfont icon-gongju"></i>
+              <i class="iconfont icon-gongju"></i>
+              <nuxt-link to="/tools" class="toUrl">
                 站长工具
               </nuxt-link>
             </li>
 
             <li>
-              <nuxt-link to="/note">
-                <i class="iconfont icon-biji"></i>
+              <i class="iconfont icon-biji"></i>
+              <nuxt-link to="/note" class="toUrl">
                 个人笔记
               </nuxt-link>
             </li>
 
             <li>
-              <nuxt-link to="/whisper">
-                <i class="iconfont icon-speak"></i>
+              <i class="iconfont icon-speak"></i>
+              <nuxt-link to="/whisper" class="toUrl">
                 微语
               </nuxt-link>
             </li>
 
             <li>
-              <nuxt-link to="/about">
-                <i class="iconfont icon-about"></i>
+              <i class="iconfont icon-about"></i>
+              <nuxt-link to="/about" class="toUrl">
                 关于本站
               </nuxt-link>
             </li>
@@ -53,34 +53,34 @@
                       placeholder="输入关键字 Enter键搜索..."></el-input>
           </div>
 
-          <div style="display: inline-block" v-if="userInfo == null || !userInfo">
-            <span style="margin-right: 20px"><nuxt-link to="/login">登录</nuxt-link></span>
-            <nuxt-link to="/login/register">
-              <el-button type="primary" round>我要注册</el-button>
-            </nuxt-link>
-          </div>
-          <div v-else style="display: inline-block">
-            <nuxt-link style="    color: #99a9bf;" to="/admin">会员中心</nuxt-link>
-            <img src="../assets/img/default.png" style="border-radius: 50%;margin-left: 20px" alt=""/>
-            <el-dropdown trigger="click">
-              <span class="el-dropdown-link" style="cursor: pointer">
-                {{ userInfo.realname }}
-                <i class="el-icon-arrow-down el-icon--right"></i>
-              </span>
-              <el-dropdown-menu slot="dropdown">
-                <!--      <el-dropdown-item v-show="isClose">
-                  <span @click="updateBg">换张背景图</span>
-                </el-dropdown-item>
-                <el-dropdown-item v-show="!isClose">
-                  <span @click="openBg">开启背景图</span>
-                </el-dropdown-item>
-                <el-dropdown-item v-show="isClose">
-                  <span @click="closeBg">关闭背景图</span>
-                </el-dropdown-item> -->
-                <el-dropdown-item><span @click="loginOut">退出</span></el-dropdown-item>
-              </el-dropdown-menu>
-            </el-dropdown>
-          </div>
+<!--          <div style="display: inline-block" v-if="userInfo == null || !userInfo">-->
+<!--            <span style="margin-right: 20px"><nuxt-link to="/login">登录</nuxt-link></span>-->
+<!--            <nuxt-link to="/login/register">-->
+<!--              <el-button type="primary" round>我要注册</el-button>-->
+<!--            </nuxt-link>-->
+<!--          </div>-->
+<!--          <div v-else style="display: inline-block">-->
+<!--            <nuxt-link style="    color: #99a9bf;" to="/admin">会员中心</nuxt-link>-->
+<!--            <img src="../assets/img/default.png" style="border-radius: 50%;margin-left: 20px" alt=""/>-->
+<!--            <el-dropdown trigger="click">-->
+<!--              <span class="el-dropdown-link" style="cursor: pointer">-->
+<!--                {{ userInfo.realname }}-->
+<!--                <i class="el-icon-arrow-down el-icon&#45;&#45;right"></i>-->
+<!--              </span>-->
+<!--              <el-dropdown-menu slot="dropdown">-->
+<!--                &lt;!&ndash;      <el-dropdown-item v-show="isClose">-->
+<!--                  <span @click="updateBg">换张背景图</span>-->
+<!--                </el-dropdown-item>-->
+<!--                <el-dropdown-item v-show="!isClose">-->
+<!--                  <span @click="openBg">开启背景图</span>-->
+<!--                </el-dropdown-item>-->
+<!--                <el-dropdown-item v-show="isClose">-->
+<!--                  <span @click="closeBg">关闭背景图</span>-->
+<!--                </el-dropdown-item> &ndash;&gt;-->
+<!--                <el-dropdown-item><span @click="loginOut">退出</span></el-dropdown-item>-->
+<!--              </el-dropdown-menu>-->
+<!--            </el-dropdown>-->
+<!--          </div>-->
         </div>
         <div class="member-center">
           <div class="member-center-search" v-show="isShowSearch">
@@ -89,33 +89,33 @@
             <el-button type="primary" @click="search" icon="el-icon-search">搜索</el-button>
           </div>
 
-          <div style="display: inline-block" v-if="userInfo == null || !userInfo">
-            <i class="el-icon-search" style="cursor: pointer;margin-right: 15px;"
-               @click="isShowSearch = !isShowSearch"></i>
-            <span style="margin-right: 20px"><nuxt-link to="/login">登录</nuxt-link></span>
-            <nuxt-link to="/login/register">
-              <el-button type="primary" round>我要注册</el-button>
-            </nuxt-link>
-          </div>
+<!--          <div style="display: inline-block" v-if="userInfo == null || !userInfo">-->
+<!--            <i class="el-icon-search" style="cursor: pointer;margin-right: 15px;"-->
+<!--               @click="isShowSearch = !isShowSearch"></i>-->
+<!--            <span style="margin-right: 20px"><nuxt-link to="/login">登录</nuxt-link></span>-->
+<!--            <nuxt-link to="/login/register">-->
+<!--              <el-button type="primary" round>我要注册</el-button>-->
+<!--            </nuxt-link>-->
+<!--          </div>-->
 
-          <div v-else>
-            <i class="el-icon-search" style="cursor: pointer;" @click="isShowSearch = !isShowSearch"></i>
+<!--          <div v-else>-->
+<!--            <i class="el-icon-search" style="cursor: pointer;" @click="isShowSearch = !isShowSearch"></i>-->
 
-            <el-dropdown trigger="click">
-              <span class="el-dropdown-link" style="cursor: pointer">
-                <img src="../assets/img/default.png" style="border-radius: 50%;margin-left: 20px" alt=""/>
-                {{ userInfo.realname }}
-                <i class="el-icon-arrow-down el-icon--right"></i>
-              </span>
-              <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item>
-                  <span><nuxt-link style="color: #99a9bf;" to="/admin">会员中心</nuxt-link></span>
-                </el-dropdown-item>
+<!--            <el-dropdown trigger="click">-->
+<!--              <span class="el-dropdown-link" style="cursor: pointer">-->
+<!--                <img src="../assets/img/default.png" style="border-radius: 50%;margin-left: 20px" alt=""/>-->
+<!--                {{ userInfo.realname }}-->
+<!--                <i class="el-icon-arrow-down el-icon&#45;&#45;right"></i>-->
+<!--              </span>-->
+<!--              <el-dropdown-menu slot="dropdown">-->
+<!--                <el-dropdown-item>-->
+<!--                  <span><nuxt-link style="color: #99a9bf;" to="/admin">会员中心</nuxt-link></span>-->
+<!--                </el-dropdown-item>-->
 
-                <el-dropdown-item><span @click="loginOut">退出</span></el-dropdown-item>
-              </el-dropdown-menu>
-            </el-dropdown>
-          </div>
+<!--                <el-dropdown-item><span @click="loginOut">退出</span></el-dropdown-item>-->
+<!--              </el-dropdown-menu>-->
+<!--            </el-dropdown>-->
+<!--          </div>-->
         </div>
       </div>
     </div>
@@ -125,39 +125,40 @@
       <div class="menu-s">
         <ul>
           <li>
-            <nuxt-link to="/">
-              <i class="iconfont icon-shouye"></i>
+            <i class="iconfont icon-shouye"></i>
+            <nuxt-link to="/" class="toUrl">
               首页
             </nuxt-link>
           </li>
 
           <li>
-            <nuxt-link to="/tools">
-              <i class="iconfont icon-gongju"></i>
+            <i class="iconfont icon-gongju"></i>
+            <nuxt-link to="/tools" class="toUrl">
               站长工具
             </nuxt-link>
           </li>
 
           <li>
-            <nuxt-link to="/note">
-              <i class="iconfont icon-biji"></i>
+            <i class="iconfont icon-biji"></i>
+            <nuxt-link to="/note" class="toUrl">
               个人笔记
             </nuxt-link>
           </li>
 
           <li>
-            <nuxt-link to="/whisper">
-              <i class="iconfont icon-speak"></i>
+            <i class="iconfont icon-speak"></i>
+            <nuxt-link to="/whisper" class="toUrl">
               微语
             </nuxt-link>
           </li>
 
           <li>
-            <nuxt-link to="/about">
-              <i class="iconfont icon-about"></i>
+            <i class="iconfont icon-about"></i>
+            <nuxt-link to="/about" class="toUrl">
               关于本站
             </nuxt-link>
           </li>
+
         </ul>
       </div>
     </el-drawer>
@@ -327,6 +328,11 @@
             color: #fff;
             background: #289ee2;
             animation: upOpacity 0.3s;
+          }
+
+          .toUrl {
+            height: 100%;
+            display: inline-block;
           }
 
           /deep/ li.nuxt-link-exact-active {

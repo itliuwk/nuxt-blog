@@ -5,10 +5,10 @@
   "author": "liuwk",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "dev": "nuxt --exec babel-node",
+    "build": "nuxt build --exec babel-node",
+    "start": "nuxt start --exec babel-node",
+    "generate": "nuxt generate --exec babel-node"
   },
   "dependencies": {
     "address": "^1.1.1",

@@ -73,6 +73,7 @@ export default {
       this.getCount();
     }
   },
+
   mounted() {
     this.getList();
     this.getCount();

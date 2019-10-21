@@ -27,11 +27,11 @@
 </template>
 
 <script>
-  // import pf from '../../assets/img/pf.png'
-  // import gq from '../../assets/img/gq.png'
-  // import dwz from '../../assets/img/dwz.png'
-  // import bk from '../../assets/img/favicon.png'
-  // import zqzb from '../../assets/img/zqzb.jpg'
+  import pf from '../../assets/img/pf.png'
+  import gq from '../../assets/img/gq.png'
+  import dwz from '../../assets/img/dwz.png'
+  import bk from '../../assets/img/favicon.png'
+  import zqzb from '../../assets/img/zqzb.jpg'
   import { updateTitle } from '~/utils/index';
 
   export default {
@@ -44,36 +44,36 @@
             name: '电影实时票房',
             path: '/tools/dy',
             info: '24小时更新电影票房，查看最新的排名',
-            // src: pf
-              src:'',
+            src: pf
+              // src:'',
           },
           {
             name: '歌曲搜索',
             path: '/tools/music',
             info: '搜索热门歌曲，部分可下载收费音乐',
-            // src: gq
-              src:'',
+            src: gq
+              // src:'',
           },
           {
             name: '短网址',
             path: '/tools/dwz',
             info: '免费、稳定有效的在线缩短网址',
-            // src: dwz
-              src:'',
+            src: dwz
+              // src:'',
           },
           {
             name: '文件',
             path: '/tools/files',
             info: '免费、稳定有效的在线文件链接生成',
-            // src: bk
-              src:'',
+            src: bk
+              // src:'',
           },
           {
             name: '个人博客',
             path: 'https://itliuwk.github.io/',
             info: '刘伟坤 - 小前端前往后端的路上的博客',
-            // src: bk,
-              src:'',
+            src: bk,
+              // src:'',
             target:'_blank'
           }
         ]
