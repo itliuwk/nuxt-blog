@@ -16,7 +16,7 @@
     "element-ui": "^2.4.11",
     "jsonp": "^0.2.1",
     "moment": "^2.24.0",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "vue-quill-editor": "^3.0.6",
     "vue-clipboard2": "^0.3.0",
     "require": "^2.4.20"
